@@ -22,3 +22,11 @@ When to Use Each
 Instance Methods: Use when you want the methods to be available to instances of a class that includes the module.
 Class Methods: Use when you want the methods to be available directly on the module without needing to include it in a class or create an instance.
 =end
+
+
+=begin
+Instance Methods in Modules:
+- Defined without self.
+- Need to be included in a class to be used.
+- Can only be called on instances of the class that includes the module.
+=end
