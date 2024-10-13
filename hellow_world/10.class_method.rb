@@ -14,7 +14,7 @@ Greetings.say_good_morning  # Outputs: Good morning!
 
 =begin
 
-Class Methods:
+Class Methods in Modules:
 
 - Defined with self..
 - Can be called directly on the module.
@@ -26,3 +26,7 @@ When to Use Each
 - Instance Methods: Use when you want the methods to be available to instances of a class that includes the module.
 - Class Methods: Use when you want the methods to be available directly on the module without needing to include it in a class or create an instance.
 =end
+
+# NOTE: There are 2 types of Ruby Modules:
+# 1. Instance Methods
+# 2. Class Methods
