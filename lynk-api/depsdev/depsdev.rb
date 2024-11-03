@@ -35,6 +35,15 @@ class DepsDevClient
     get("/systems/#{system}/packages/#{encoded_name}/versions/#{encoded_version}")
   end
 
+  # Get dependencies of a specific version
+  def get_dependencies(system, name, version)
+    system = "go"
+    encoded_name = URI.encode_www_form_component(name)
+    encoded_version = URI.encode_www_form_component(version)
+    get("/systems/#{system}/packages/#{encoded_name}/versions/#{encoded_version}:dependencies")
+  end
+
+
   private
 
   # General GET request method
@@ -73,3 +82,7 @@ puts client.get_package(system, name)
 
 puts "\nVersion Lookup:"
 puts client.get_version(system, name, version)
+
+# Example API Calls
+puts "Dependencies Lookup:"
+puts client.get_dependencies(system, name, version)
